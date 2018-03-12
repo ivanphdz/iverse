@@ -4,6 +4,7 @@
   "description": "A simple IoT Platform - DB Module",
   "main": "index.js",
   "scripts": {
+    "test": "DEBUG=iverse:* ava tests/ --verbose",
     "setup": "DEBUG=iverse:* node setup.js",
     "lint": "standard"
   },
@@ -18,11 +19,15 @@
   },
   "homepage": "https://github.com/ivanphdz/iverse#readme",
   "devDependencies": {
+    "ava": "^0.22.0",
+    "proxyquire": "^1.8.0",
+    "sinon": "^3.2.1",
     "standard": "^10.0.3"
   },
   "dependencies": {
     "chalk": "^2.1.0",
     "debug": "^3.0.1",
+    "defaults": "^1.0.3",
     "inquirer": "^3.2.3",
     "pg": "^7.2.0",
     "pg-hstore": "^2.3.2",
